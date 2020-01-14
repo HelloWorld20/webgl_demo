@@ -31,12 +31,12 @@ function main() {
   }
   // 从webgl系统中拿到变量
   const a_Position = gl.getAttribLocation(gl.program, "a_Position");
-  const a_PiontSize = gl.getAttribLocation(gl.program, "a_PointSize");
+  const a_PointSize = gl.getAttribLocation(gl.program, "a_PointSize");
   const u_FragColor = gl.getUniformLocation(gl.program, "u_FragColor");
 
   // 通过js设置webgl系统的变量
   gl.vertexAttrib3f(a_Position, 0.0, 0.0, 0.0);
-  gl.vertexAttrib1f(a_PiontSize, 15.0);
+  gl.vertexAttrib1f(a_PointSize, 15.0);
 
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
 
@@ -78,7 +78,7 @@ function main() {
     // console.log(glOffsetX, glOffsetY);
     // 通过js设置webgl系统的变量
     gl.vertexAttrib3f(a_Position, glOffsetX, -glOffsetY, 0.0);
-    gl.vertexAttrib1f(a_PiontSize, 15.0);
+    gl.vertexAttrib1f(a_PointSize, 15.0);
     gl.uniform4f(u_FragColor, glColor, 0.0, 0.0, 1.0);
     // gl.uniform4f(u_FragColor, 0.0, 1.0, 0.0, 1.0);
 
